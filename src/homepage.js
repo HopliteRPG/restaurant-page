@@ -8,10 +8,8 @@ function createHomepage (){
     let contentHTML = document.querySelector("#content");
 
     let divCreate = document.createElement("div");
-    let cloneDivCreate = divCreate.cloneNode(true);
 
     let h1Create = document.createElement("h1")
-    let cloneH1Create = h1Create.cloneNode(true);
 
 
     const imageVar = document.createElement("img");
@@ -20,14 +18,39 @@ function createHomepage (){
 
 
     let pCreate = document.createElement("p");
-    let clonePCreate = pCreate.cloneNode(true);
 
-    contentHTML.appendChild(cloneDivCreate);
-    cloneDivCreate.appendChild(cloneH1Create);
-    cloneH1Create.innerText = "Jims Pizza";
-    cloneDivCreate.appendChild(imageVar);
-    cloneDivCreate.appendChild(clonePCreate);
-    clonePCreate.innerText = "Jims Pizzeria makes the best pizza in the entire state of New York";
+    
+
+    function createDivSection(html,div,p,ptext,h1,h1text,img){
+        let cloneDivCreate = div.cloneNode(true);
+        let cloneH1Create = h1.cloneNode(true);
+        let clonePCreate = p.cloneNode(true);
+
+        if(img == undefined){
+            html.appendChild(cloneDivCreate);
+            cloneDivCreate.appendChild(cloneH1Create);
+            cloneH1Create.innerText = h1text;
+            cloneDivCreate.appendChild(clonePCreate);
+            clonePCreate.innerText = ptext;
+        }
+        else{
+            html.appendChild(cloneDivCreate);
+            cloneDivCreate.appendChild(cloneH1Create);
+            cloneH1Create.innerText = h1text;
+            cloneDivCreate.appendChild(img);    
+            cloneDivCreate.appendChild(clonePCreate);
+            clonePCreate.innerText = ptext;
+        }
+        
+       
+    }
+
+    createDivSection(contentHTML,divCreate,pCreate,"Sams Pizza is the best Pizza in all of Maine",h1Create,"Sams Pizza",imageVar);
+    createDivSection(contentHTML,divCreate,pCreate,"Monday-Sunday: 6am-7pm",h1Create,"Hours Open",undefined);
+    createDivSection(contentHTML,divCreate,pCreate,"123 Forest Drive, Forestville, Maine",h1Create,"Location",undefined);
+
+
+
 
 
 
@@ -35,7 +58,7 @@ function createHomepage (){
 }
 
 
-// function appendToHTML (html,div,p){
+// function appendToHTML (html,div,p,h1){
 //     html.appendChild(div);
 //     div.appendChild(p);
 //     p.innerText = "gyatt";
