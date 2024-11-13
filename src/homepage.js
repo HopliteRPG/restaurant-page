@@ -9,7 +9,7 @@ function createHomepage (){
 
     const divCreate = document.createElement("div");
 
-    const h1Create = document.createElement("h1")
+    const h1Create = document.createElement("h1");
 
 
     const imageVar = document.createElement("img");
@@ -21,38 +21,37 @@ function createHomepage (){
 
     
 
-    function createDivSection(content,div){
-        const cloneDivCreate = div.cloneNode(true);
-        clearDOM(content);
+    function createDivSection(content,div,className){
+        let cloneDivCreate = div.cloneNode(true);
+        cloneDivCreate.classList.add(className)
         content.appendChild(cloneDivCreate);
-        return{content,div}
+        return{cloneDivCreate}
     }
 
-    function createP(content,div,p,text){
-        const clonePCreate = p.cloneNode(true);
-        clearDOM(content);
-        clonePCreate.innerHTML = text
+    function createP(div,p,text){
+        let clonePCreate = p.cloneNode(true);
+        clonePCreate.innerText = text;
         div.appendChild(clonePCreate);
-        content.appendChild(div);
     }
 
-    function createH1(content,div,h1,text){
-        const cloneH1Create = h1.cloneNode(true);
-        clearDOM(content);
+    function createH1(div,h1,text){
+        let cloneH1Create = h1.cloneNode(true);
         cloneH1Create.innerText = text;
         div.appendChild(cloneH1Create);
-        content.appendChild(div);
 
     }
     
-    function clearDOM(content){
-        content.innerHTML = "";
-    }
+    // function clearDOM(content){
+    //     content.innerHTML = "";
+    // }
 
+    const headerDiv = createDivSection(contentHTML,divCreate,"HeaderDiv");
+    const headerH1 = createH1(headerDiv.cloneDivCreate,h1Create,"Maines Best Pizza Joint");
     
-    const descriptionDiv = createDivSection(contentHTML,divCreate);
-    const descriptionP = createP(content,descriptionDiv.div,pCreate,"Were the best pizza joint in all of Maine")
-    const descriptionP2 = createP(content,descriptionDiv.div,pCreate,"And that shit is based");
+
+    const descriptionDiv = createDivSection(contentHTML,divCreate,"DescriptionDiv");
+    const descriptionP = createP(descriptionDiv.cloneDivCreate,pCreate,"Were the best pizza joint in all of Maine")
+    const descriptionP2 = createP(descriptionDiv.cloneDivCreate,pCreate,"And it it tastes really good");
 
 
 
@@ -62,8 +61,3 @@ function createHomepage (){
 }
 
 
-// function appendToHTML (html,div,p,h1){
-//     html.appendChild(div);
-//     div.appendChild(p);
-//     p.innerText = "gyatt";
-// }
