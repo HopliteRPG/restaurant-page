@@ -41,17 +41,30 @@ function createHomepage (){
 
     }
     
-    // function clearDOM(content){
-    //     content.innerHTML = "";
-    // }
+
 
     const headerDiv = createDivSection(contentHTML,divCreate,"HeaderDiv");
-    const headerH1 = createH1(headerDiv.cloneDivCreate,h1Create,"Maines Best Pizza Joint");
+    const headerH1 = createH1(headerDiv.cloneDivCreate,h1Create,"Mary Maines Pizza Joint");
     
 
     const descriptionDiv = createDivSection(contentHTML,divCreate,"DescriptionDiv");
-    const descriptionP = createP(descriptionDiv.cloneDivCreate,pCreate,"Were the best pizza joint in all of Maine")
-    const descriptionP2 = createP(descriptionDiv.cloneDivCreate,pCreate,"And it it tastes really good");
+    const descriptionP = createP(descriptionDiv.cloneDivCreate,pCreate,"Mary has the best pizza in the whole state of Maine. Everytime I go in there Im greeted with warm smiles and good food.");
+    const descriptionPReviewer = createP(descriptionDiv.cloneDivCreate,pCreate,"Maines Best Eats");
+    
+    
+    const hoursDiv = createDivSection(contentHTML,divCreate,"DescriptionDiv");
+    const hoursH1 = createH1(hoursDiv.cloneDivCreate,h1Create,"Hours");
+    const hoursPMon = createP(hoursDiv.cloneDivCreate,pCreate,"Monday 6am-5pm");
+    const hoursPTue = createP(hoursDiv.cloneDivCreate,pCreate,"Tuesday 6am-11pm");
+    const hoursPWed = createP(hoursDiv.cloneDivCreate,pCreate,"Wednesday 6am-11pm");
+    const hoursPThur = createP(hoursDiv.cloneDivCreate,pCreate,"Thursday 6am-11pm");
+    const hoursPFri = createP(hoursDiv.cloneDivCreate,pCreate,"Friday 6am-11pm");
+    const hoursPSat = createP(hoursDiv.cloneDivCreate,pCreate,"Saturday 6am-11pm");
+    const hoursPSun = createP(hoursDiv.cloneDivCreate,pCreate,"Sunday 6am-11pm");
+
+    const locationDiv = createDivSection(contentHTML,divCreate,"locationDiv");
+    const locationH1 = createH1(locationDiv.cloneDivCreate,h1Create,"Location")
+    const locationP = createP(locationDiv.cloneDivCreate,pCreate,"123 Ship St, Portland, Maine")
 
 
 
