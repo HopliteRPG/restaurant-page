@@ -12,8 +12,12 @@
     display: flex;
     flex-direction:column ;
     align-items: center;
-
+    background-color: rgb(221, 162, 13);
+    padding: 10px;
+    border-radius: 10px;
 }
+
+
 
 h1{
     display: flex;
@@ -29,3 +33,8 @@ body{
     background-color: lightsalmon;
 }
 
+
+
+.descriptionReviewerP{
+    font-weight: bold;
+}
