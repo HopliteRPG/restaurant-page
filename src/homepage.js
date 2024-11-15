@@ -14,12 +14,14 @@ function createHomepage (){
 
     const imageVar = document.createElement("img");
     imageVar.src = pizzaPhoto;
-    imageVar.setAttribute("class","pizza-photo")
 
 
     const pCreate = document.createElement("p");
 
-    
+    function createPhoto(div,photo,className){
+    photo.setAttribute("class",className);
+    div.appendChild(photo)
+    }
 
     function createDivSection(content,div,className){
         let cloneDivCreate = div.cloneNode(true);
@@ -41,13 +43,15 @@ function createHomepage (){
         cloneH1Create.innerText = text;
         cloneH1Create.classList.add(className);
         div.appendChild(cloneH1Create);
-
     }
+
+
     
 
 
     const headerDiv = createDivSection(contentHTML,divCreate,"headerDiv");
     const headerH1 = createH1(headerDiv.cloneDivCreate,h1Create,"Mary Maines Pizza Joint","storeTextHeader");
+    const foodPhoto = createPhoto(headerDiv.cloneDivCreate,imageVar,"pizza-photo")
     
 
     const descriptionDiv = createDivSection(contentHTML,divCreate,"descriptionDiv");
