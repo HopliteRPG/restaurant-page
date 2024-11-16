@@ -1,4 +1,7 @@
-function createHomepage (){
+// Menu Module
+export {createMenu}
+
+function createMenu (){
     const contentHTML = document.querySelector("#content");
 
     const divCreate = document.createElement("div");
@@ -6,6 +9,8 @@ function createHomepage (){
     const h1Create = document.createElement("h1");
 
     const pCreate = document.createElement("p");
+
+
 
     function createPhoto(div,photo,className){
     photo.setAttribute("class",className);
@@ -33,4 +38,9 @@ function createHomepage (){
         cloneH1Create.classList.add(className);
         div.appendChild(cloneH1Create);
     }
+
+    const headerDiv = createDivSection(contentHTML,divCreate,"headerDiv");
+    const headerH1 = createH1(headerDiv.cloneDivCreate,h1Create,"Menu","menuTextHeader");
+
+
 }

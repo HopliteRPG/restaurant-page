@@ -1,3 +1,5 @@
+// Homepage Module
+
 export {createHomepage}
 import pizzaPhoto from "./photos/pizza.jpg";
 
