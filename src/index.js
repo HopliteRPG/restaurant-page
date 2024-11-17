@@ -1,6 +1,7 @@
 import "./styles.css";
 import {createHomepage} from "./homepage";
 import {createMenu} from "./menu";
+import {createAbout} from "./about"
 
 const contentHTML = document.querySelector("#content");
 
@@ -18,13 +19,18 @@ createHomepage();
 
 homeBtn.addEventListener("click", ()=>{
     clearContent(contentHTML);
-    createHomepage()
+    createHomepage();
 })
 
 menuBtn.addEventListener("click", ()=>{
     clearContent(contentHTML);
     createMenu();
-}
-);
+})
+
+aboutBtn.addEventListener("click", ()=>{
+    clearContent(contentHTML);
+    createAbout()
+})
+
 
 
