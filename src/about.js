@@ -1,8 +1,9 @@
+// About Module
+
 export {createAbout}
 
 
 function createAbout (){
-    alert("about is working")
     const contentHTML = document.querySelector("#content");
 
     const divCreate = document.createElement("div");
@@ -39,4 +40,28 @@ function createAbout (){
         cloneH1Create.classList.add(className);
         div.appendChild(cloneH1Create);
     }
+
+    const headerDiv = createDivSection(contentHTML,divCreate,"contactUsHeaderDiv");
+    const headerH1 = createH1(headerDiv.cloneDivCreate,h1Create,"Contact Us","contactUsHeaderH1");
+
+    const contactInformationDiv1 = createDivSection(contentHTML,divCreate,"contactInformationDiv");
+    const contactInformationNameP1 = createP(contactInformationDiv1.cloneDivCreate,pCreate,"John Smith","contactInformationNameP");
+    const contactInformationTitleP1 = createP(contactInformationDiv1.cloneDivCreate,pCreate,"Owner","contactInformationTitleP");
+    const contactInformationPhoneNumberP1 = createP(contactInformationDiv1.cloneDivCreate,pCreate,"555-555-5554","contactInformationPhoneNumberP");
+    const contactInformationEmailP1 = createP(contactInformationDiv1.cloneDivCreate,pCreate,"totallyRealEmail@notFake.com","contactInformationEmailP");
+
+    const contactInformationDiv2 = createDivSection(contentHTML,divCreate,"contactInformationDiv");
+    const contactInformationNameP2 = createP(contactInformationDiv2.cloneDivCreate,pCreate,"Jane Doe","contactInformationNameP");
+    const contactInformationTitleP2 = createP(contactInformationDiv2.cloneDivCreate,pCreate,"Chef","contactInformationTitleP");
+    const contactInformationPhoneNumberP2 = createP(contactInformationDiv2.cloneDivCreate,pCreate,"555-555-5555","contactInformationPhoneNumberP");
+    const contactInformationEmailP2 = createP(contactInformationDiv2.cloneDivCreate,pCreate,"perfectlyRealEmail@notFake.com","contactInformationEmailP");
+
+    const contactInformationDiv3 = createDivSection(contentHTML,divCreate,"contactInformationDiv");
+    const contactInformationNameP3 = createP(contactInformationDiv3.cloneDivCreate,pCreate,"Jonah Smith","contactInformationNameP");
+    const contactInformationTitleP3 = createP(contactInformationDiv3.cloneDivCreate,pCreate,"Waiter","contactInformationTitleP");
+    const contactInformationPhoneNumberP3 = createP(contactInformationDiv3.cloneDivCreate,pCreate,"555-555-5556","contactInformationPhoneNumberP");
+    const contactInformationEmailP3 = createP(contactInformationDiv3.cloneDivCreate,pCreate,"totallyRealEmailAndNotFake@notFake.com","contactInformationEmailP");
+
+
+
 }
