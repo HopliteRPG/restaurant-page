@@ -1,6 +1,12 @@
 // Menu Module
 export {createMenu}
 
+import cocaCola from "./photos/cocacola.jpeg";
+const cocaColaImg = document.createElement("img");
+cocaColaImg.src = cocaCola;
+
+
+
 function createMenu (){
     const contentHTML = document.querySelector("#content");
 
@@ -41,6 +47,17 @@ function createMenu (){
 
     const headerDiv = createDivSection(contentHTML,divCreate,"headerDiv");
     const headerH1 = createH1(headerDiv.cloneDivCreate,h1Create,"Menu","menuTextHeader");
+
+    const beveragesH1Div = createDivSection(contentHTML,divCreate,"beveragesH1Div");
+    const beveragesH1 = createH1(beveragesH1Div.cloneDivCreate,h1Create,"Beverages","beveragesH1");
+
+    const cocaColaDiv = createDivSection(contentHTML,divCreate,"cocaColaDiv");
+    const cocaColaH1 = createH1(cocaColaDiv.cloneDivCreate,h1Create,"Coca Cola","cocaColaH1");
+    const cocaColaImgDiv = createPhoto(cocaColaDiv.cloneDivCreate,cocaColaImg,"cocaColaImg")
+    const cocaColaDescP = createP(cocaColaDiv.cloneDivCreate,pCreate,"Enjoy a nice cold Coca Cola with your meal","cocaColaDescP");
+    const cocaColaPriceP = createP(cocaColaDiv.cloneDivCreate,pCreate,"$5","cocaColaPriceP");
+
+    
 
 
 }
