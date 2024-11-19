@@ -1,13 +1,13 @@
 import "./styles.css";
 import {createHomepage} from "./homepage";
 import {createMenu} from "./menu";
-import {createAbout} from "./about"
+import {creatContact} from "./contact"
 
 const contentHTML = document.querySelector("#content");
 
 const homeBtn = document.querySelector(".homeBtn");
 const menuBtn = document.querySelector(".menuBtn");
-const aboutBtn = document.querySelector(".aboutBtn");
+const contactBtn = document.querySelector(".contactBtn");
 
 
 function clearContent(content){
@@ -27,9 +27,9 @@ menuBtn.addEventListener("click", ()=>{
     createMenu();
 })
 
-aboutBtn.addEventListener("click", ()=>{
+contactBtn.addEventListener("click", ()=>{
     clearContent(contentHTML);
-    createAbout()
+    creatContact()
 })
 
 

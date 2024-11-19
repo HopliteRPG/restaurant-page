@@ -1,3 +1,4 @@
+/* Default */
 #content{
     display: flex;
     flex-direction: column;
@@ -17,16 +18,9 @@
     border-radius: 10px;
 }
 
-
-
 h1{
     display: flex;
     justify-content: center;
-}
-
-.pizza-photo{
-    height: 250px;
-    width: 400px;
 }
 
 body{
@@ -34,16 +28,25 @@ body{
 }
 
 
+/* Home */
+
+.pizza-photo{
+    height: 250px;
+    width: 400px;
+}
 
 .descriptionReviewerP{
     font-weight: bold;
 }
+
+/* Menu */
 
 .cocaColaImg{
     height: 250px;
     width: 400px;
 }
 
+/* Contact */
 
 #content>.contactInformationDiv{
     display: flex;

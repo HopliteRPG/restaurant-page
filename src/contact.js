@@ -1,9 +1,9 @@
 // About Module
 
-export {createAbout}
+export {creatContact}
 
 
-function createAbout (){
+function creatContact (){
     const contentHTML = document.querySelector("#content");
 
     const divCreate = document.createElement("div");
