@@ -29,7 +29,7 @@ menuBtn.addEventListener("click", ()=>{
 
 contactBtn.addEventListener("click", ()=>{
     clearContent(contentHTML);
-    creatContact()
+    creatContact();
 })
 
 

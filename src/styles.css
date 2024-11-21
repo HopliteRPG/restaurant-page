@@ -41,7 +41,11 @@ body{
 
 /* Menu */
 
-.cocaColaImg{
+#content>.H1Div{
+    width: 25%;
+}
+
+.cocaColaImg,.iceTeaImg, .garlicKnotsImg,.breadSticksImg,.cheesePizzaImg,.spagettiAndMeatballsImg{
     height: 250px;
     width: 400px;
 }
