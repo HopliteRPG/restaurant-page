@@ -25,6 +25,29 @@ h1{
 
 body{
     background-color: lightsalmon;
+    margin: 0;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    padding-bottom: 15px;
+    column-gap: 5px;
+
+}
+
+nav>button{
+    background-color: white;
+    width: 200px;
+    cursor: pointer;
+    border: 2px solid black;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav>button:hover{
+    background-color: lightgray;
 }
 
 
